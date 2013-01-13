@@ -1,0 +1,83 @@
+  GNU nano 2.2.4                                                                             Fichero: /etc/apt/mirror.list                                                                                                                                                                  
+
+############# config ##################
+#
+# set base_path    /var/spool/apt-mirror
+set base_path   /repo/
+#
+set mirror_path  $base_path/mirror
+set skel_path    $base_path/skel
+set var_path     $base_path/var
+set cleanscript $var_path/clean.sh
+# set defaultarch  <running host architecture>
+set postmirror_script $var_path/postmirror.sh
+# set run_postmirror 0
+set nthreads     40
+set _tilde 0
+#
+############# end config ##############
+
+        ######  PRINCIPAL DEBIAN LENNY & SQUEEZE (MAIN - CONTRIB - NON-FREE) ######
+        #deb-amd64  http://debian.cantv.net/debian lenny main contrib non-free
+        #deb-i386 http://debian.cantv.net/debian lenny main contrib non-free
+        #deb-src http://debian.cantv.net/debian lenny main contrib non-free
+
+deb-amd64  http://debian.cantv.net/debian squeeze main contrib non-free
+deb-i386 http://debian.cantv.net/debian squeeze main contrib non-free
+        #deb-src http://debian.cantv.net/debian squeeze main contrib non-free
+
+deb-amd64  http://debian.cantv.net/debian wheezy main contrib non-free
+deb-i386 http://debian.cantv.net/debian wheezy main contrib non-free
+
+        ######  PROPOSED UPDATES DEBIAN LENNY & SQUEEZE (MAIN - CONTRIB - NON-FREE) ######
+        #deb-amd64 http://debian.cantv.net/debian lenny-proposed-updates main contrib non-free
+        #deb-i386 http://debian.cantv.net/debian lenny-proposed-updates main contrib non-free
+        #deb-amd64 http://debian.cantv.net/debian squeeze-proposed-updates main contrib non-free
+        #deb-i386 http://debian.cantv.net/debian squeeze-proposed-updates main contrib non-free
+
+        ######  SECURITY DEBIAN LENNY & SQUEEZE UPDATES (MAIN - CONTRIB - NON-FREE) ######
+        #deb-i386 http://security.debian.org/ lenny/updates main contrib non-free
+        #deb-amd64 http://security.debian.org/ lenny/updates main contrib non-free
+        #deb-i386 http://security.debian.org/ squeeze/updates main contrib non-free
+        #deb-amd64 http://security.debian.org/ squeeze/updates main contrib non-free
+
+        ######  DEBIAN SQUEEZE UPDATES (MAIN - CONTRIB - NON-FREE) ######
+        #deb-amd64 http://debian.cantv.net/debian squeeze-updates main contrib non-free
+        #deb-i386 http://debian.cantv.net/debian squeeze-updates main contrib non-free
+
+        ######  DEBIAN LENNY VOLATILE (MAIN - CONTRIB - NON-FREE) ######
+        #deb-i386 http://volatile.debian.org/debian-volatile lenny/volatile main contrib non-free
+        #deb-amd64 http://volatile.debian.org/debian-volatile lenny/volatile main contrib non-free
+
+deb-i386 http://backports.debian.org/debian-backports squeeze-backports main
+deb-amd64 http://backports.debian.org/debian-backports squeeze-backports main
+
+
+
+
+        ######  CANAIMA ESTABLE (USUARIOS) ######
+deb-i386 http://repositorio.canaima.softwarelibre.gob.ve roraima usuarios
+deb-amd64 http://repositorio.canaima.softwarelibre.gob.ve roraima usuarios
+
+        ######  CANAIMA DESARROLLO (USUARIOS) ######
+deb-i386 http://repositorio.canaima.softwarelibre.gob.ve auyantepui usuarios
+deb-amd64 http://repositorio.canaima.softwarelibre.gob.ve auyantepui usuarios
+
+        ######  CANAIMA PRUEBAS (USUARIOS) ######
+deb-i386 http://repositorio.canaima.softwarelibre.gob.ve/ kukenan usuarios
+deb-amd64 http://repositorio.canaima.softwarelibre.gob.ve/ kukenan usuarios
+
+        ######  SEGURIDAD CANAIMA (USUARIOS) ######
+deb-i386 http://seguridad.canaima.softwarelibre.gob.ve/ seguridad usuarios
+deb-amd64 http://seguridad.canaima.softwarelibre.gob.ve/ seguridad usuarios
+
+deb-i386 http://paquetes.canaima.softwarelibre.gob.ve auyantepui main aportes no-libres
+deb-amd64 http://paquetes.canaima.softwarelibre.gob.ve auyantepui main aportes no-libres
+
+clean http://debian.cantv.net/debian
+#clean http://volatile.debian.org/debian-volatile
+#clean http://security.debian.org/
+clean http://repositorio.canaima.softwarelibre.gob.ve/
+clean http://seguridad.canaima.softwarelibre.gob.ve/
+
+
